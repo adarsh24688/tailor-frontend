@@ -1,0 +1,128 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: 1em;
+}
+
+.search-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.country-dropdown {
+  margin-left: 20px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.hamburger-icon {
+  font-size: 1.5em;
+  color: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #333;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .nav-list {
+  flex-direction: column;
+  padding: 0;
+}
+
+.sidebar .nav-item {
+  padding: 15px;
+  border-bottom: 1px solid #fff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2em;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Overlay for when sidebar is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .desktop-nav,
+  .desktop-search,
+  .desktop-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
